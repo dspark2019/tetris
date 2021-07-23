@@ -1,4 +1,4 @@
-import BLOCKS from "./blocks.js";
+import BLOCKS from "./blocks.js"
 
 // DOM
 const playground = document.querySelector(".playground > ul");
@@ -130,7 +130,7 @@ function checkEmpty(target) {
 }
 function moveBlock(moveType, amount) {
     tempMovingItem[moveType] += amount;
-    renderBlocks(moveType)
+    renderBlocks(moveType) 
 }
 function chageDirection() {
     const direction = tempMovingItem.direction;
@@ -144,7 +144,7 @@ function dropBlock(){
     }, 10)
 }
 function showGameoverText(){
-    gameText.getElementsByClassName.display = "flex"
+    gameText.style.display = "flex" 
 }
 
 // event handling
@@ -173,5 +173,7 @@ document.addEventListener("keydown", e => {
 restartButton.addEventListener("click",()=>{
     playground.innerHTML = "";
     gameText.style.display = "none"
+    scoreDisplay.innerText = "0" 
     init()
 })
+                    
